@@ -1,0 +1,22 @@
+{
+  "name": "zkteco-attendance",
+  "module": "src/zk-connect.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/zk-connect.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "dayjs": "^1.11.19",
+    "dotenv": "^17.2.3",
+    "node-zklib": "^1.3.0",
+    "prisma": "^6.19.0"
+  }
+}

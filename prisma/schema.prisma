@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AttendanceLog {
+  id         Int      @id @default(autoincrement())
+  userId     String
+  timestamp  DateTime
+  type       String   // CHECK_IN or CHECK_OUT
+  deviceId   String
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, timestamp], name: "userId_timestamp")
+}
